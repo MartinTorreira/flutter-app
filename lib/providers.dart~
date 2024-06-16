@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+class FormProvider with ChangeNotifier {
+  String? textNameFieldValue;
+  String? facilityNameFieldValue;
+  int? dropDownValue;
+  double sliderValue = 0;
+  bool switchValue = false;
+  DateTime initialDateTimeValue = DateTime.now();
+  DateTime finalDateTimeValue = DateTime.now();
+  String? radioButtonValue = "A";
+
+  void setTextNameFieldValue(String value) {
+    textNameFieldValue = value;
+    notifyListeners();
+  }
+
+  void setFacilityNameFieldValue(String value) {
+    facilityNameFieldValue = value;
+    notifyListeners();
+  }
+
+  void setDropDownValue(int? value) {
+    dropDownValue = value;
+    notifyListeners();
+  }
+
+  void setSwitchValue(bool value) {
+    switchValue = value;
+    notifyListeners();
+  }
+
+  void setInitialDateTimeValue(DateTime value) {
+    initialDateTimeValue = value;
+    notifyListeners();
+  }
+
+  void setFinalDateTimeValue(DateTime value) {
+    finalDateTimeValue = value;
+    notifyListeners();
+  }
+
+  void setSliderValue(double value) {
+    sliderValue = value;
+    notifyListeners();
+  }
+
+  void setRadioButtonValue(String? value) {
+    radioButtonValue = value;
+    notifyListeners();
+  }
+}
